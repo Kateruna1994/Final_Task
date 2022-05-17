@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Demo Presta shop tests" parallel="tests" thread-count="3">
+
+  <listeners>
+    <listener class-name="core.MyTestListener"/>
+  </listeners>
+
+  <test name="Text verification test">
+    <classes>
+      <class name="storeTests.SubscribeWithInvalidEmailTests"/>
+    </classes>
+  </test>
+
+  <test name="Check languages test">
+    <classes>
+      <class name="storeTests.CheckLanguagesTests"/>
+    </classes>
+  </test>
+
+  <test name="Registration test">
+    <classes>
+      <class name="storeTests.RegistrationWithValidDataTests"/>
+      <class name="storeTests.RegistrationWithInvalidDataTests"/>
+    </classes>
+  </test>
+
+  <test name="Category test">
+    <classes>
+      <class name="storeTests.CheckCategoriesTests"/>
+    </classes>
+  </test>
+
+  <test name="Products test">
+    <classes>
+      <class name="storeTests.CheckPopularProductsTests"/>
+      <class name="storeTests.PriceDropCheckTests"/>
+      <class name="storeTests.SortingCheckTests"/>
+      <class name="storeTests.AddingToCartTests"/>
+      <class name="storeTests.CheckoutEndToEndTests"/>
+    </classes>
+  </test>
+</suite>
